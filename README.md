@@ -35,4 +35,4 @@ output = module(input)
 ```
 
 ## License
-Pytorch CNN Modules is provided as open source under the MIT License
+Pytorch CNN Modules is provided as open source under the MIT License, see LICENSE.
