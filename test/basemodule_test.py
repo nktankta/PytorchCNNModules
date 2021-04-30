@@ -2,7 +2,7 @@ import pytest
 import torch
 import torch.nn as nn
 from module_list import get_test_module
-from PytorchCnnModules.modules.base_module import BaseModule,SEmodule
+from PytorchCNNModules.modules.base_module import BaseModule,SEmodule
 
 class CNN(BaseModule):
     def __init__(self,in_feature,out_featue,stride=1):

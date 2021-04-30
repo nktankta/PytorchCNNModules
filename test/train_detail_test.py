@@ -5,7 +5,7 @@ import torchvision
 import torchvision.transforms as transforms
 import numpy as np
 from module_easyModel import EasyModel
-from PytorchCnnModules import *
+from PytorchCNNModules import *
 
 test_module = PlaneResidual_no_lastBN
 mode = "residual"

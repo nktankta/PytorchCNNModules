@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
-from PytorchCnnModules.modules.base_module import BaseModule
-from PytorchCnnModules import *
+from PytorchCNNModules.modules.base_module import BaseModule
+from PytorchCNNModules import *
 
 class CNN(BaseModule):
     def __init__(self,in_feature,out_featue,stride=1):
