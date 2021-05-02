@@ -22,7 +22,7 @@ torch 1.7.0 or above
 
 ## Install
 ```bash
-TODO
+$pip install PytorchCNNModules
 ```
 
 ## Usage
