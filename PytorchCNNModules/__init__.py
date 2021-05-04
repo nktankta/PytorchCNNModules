@@ -6,5 +6,3 @@ __license__      = 'MIT License'
 __author__       = 'nktankta'
 __author_email__ = 'nakataatsuya@gmail.com'
 __url__          = 'https://github.com/nktankta/PytorchCNNModules'
-
-__all__ = ['modules', ...]

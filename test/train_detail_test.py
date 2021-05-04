@@ -7,9 +7,13 @@ import numpy as np
 from module_easyModel import EasyModel
 from PytorchCNNModules import *
 
-test_module = PlaneResidual_no_lastBN
-mode = "residual"
-mode_args = {"pre_activation":True}
+test_module = InceptionA
+mode = "normal"
+mode_args = {}
+module_kwargs = {"activation":nn.ReLU,"activation_kwargs":{"inplace":True},"norm_layer":nn.BatchNorm2d}
+epochs = 2
+
+device = "cuda"
 
 transform = transforms.Compose(
     [transforms.RandomRotation(15),
@@ -39,13 +43,13 @@ criterion = nn.CrossEntropyLoss()
 
 def test_train_model():
     print("start testing")
-    net = EasyModel(1,10,test_module,mode=mode,mode_kwargs=mode_args).to("cuda")
+    net = EasyModel(1,10,test_module,mode=mode,mode_kwargs=mode_args,module_kwargs=module_kwargs).to(device)
     optimizer = optim.Adam(net.parameters(), lr=0.01)
-    for epoch in range(2):
+    for epoch in range(epochs):
         running_loss = 0.0
         for i, (inputs, labels) in enumerate(trainloader, 0):
-            inputs = inputs.to("cuda")
-            labels = labels.to("cuda")
+            inputs = inputs.to(device)
+            labels = labels.to(device)
             optimizer.zero_grad()
 
             outputs = net(inputs)

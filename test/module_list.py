@@ -12,7 +12,7 @@ class CNN(BaseModule):
     def _forward(self,x):
         return self.act(self.norm(self.cnn(x)))
 
-test_module = [InvertedResidual]
+test_module = [InceptionA]
 def get_test_module():
     return test_module
 
