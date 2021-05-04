@@ -7,7 +7,7 @@ import numpy as np
 from module_easyModel import EasyModel
 from PytorchCNNModules import *
 
-test_module = InceptionA
+test_module = InceptionD
 mode = "normal"
 mode_args = {}
 module_kwargs = {"activation":nn.ReLU,"activation_kwargs":{"inplace":True},"norm_layer":nn.BatchNorm2d}

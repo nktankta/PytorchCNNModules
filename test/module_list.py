@@ -12,7 +12,7 @@ class CNN(BaseModule):
     def _forward(self,x):
         return self.act(self.norm(self.cnn(x)))
 
-test_module = [InceptionA]
+test_module = [InceptionD]
 def get_test_module():
     return test_module
 
